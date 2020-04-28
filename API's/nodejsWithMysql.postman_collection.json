@@ -1,0 +1,253 @@
+{
+	"info": {
+		"_postman_id": "d6a52c84-7f3b-427c-b789-80b6be6f7cea",
+		"name": "nodejsWithMysql",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Company",
+			"item": [
+				{
+					"name": "Company Register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"cmp_name\": \"Webclues\",\n\t\"cmp_city\": \"Ahmedabad\",\n\t\"cmp_password\": \"Test@123\",\n\t\"cmp_confirm_password\": \"Test@123\",\n\t\"cmp_email\": \"meet@gmail.com\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:14000/api/company/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "14000",
+							"path": [
+								"api",
+								"company",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Company Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"cmp_email\":\"meet@gmail.com\",\n\t\"cmp_password\": \"Test@123\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:14000/api/company/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "14000",
+							"path": [
+								"api",
+								"company",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Employee",
+			"item": [
+				{
+					"name": "Add Employee",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbXBfaWQiOjIsImNtcF9lbWFpbCI6Im1lZXRAZ21haWwuY29tIiwiaWF0IjoxNTg3OTc1NzU2LCJleHAiOjE1ODgwNjIxNTZ9.bF2-WUvlQnLc0euGhbUAwyBAFcrzGUFovBuiEBg0uFg",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"emp_firstname\": \"Kishan\",\n\t\"emp_lastname\": \"Modiya\",\n\t\"emp_email\": \"kishan@gmail.com\",\n\t\"emp_doj\": \"01/10/2010\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:14000/api/employee/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "14000",
+							"path": [
+								"api",
+								"employee",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Employee",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbXBfaWQiOjIsImNtcF9lbWFpbCI6Im1lZXRAZ21haWwuY29tIiwiaWF0IjoxNTg3OTc1NzU2LCJleHAiOjE1ODgwNjIxNTZ9.bF2-WUvlQnLc0euGhbUAwyBAFcrzGUFovBuiEBg0uFg",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"emp_firstname\": \"Jay\",\n\t\"emp_lastname\": \"Pattel\",\n\t\"emp_doj\": \"01/03/2020\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:14000/api/employee/edit/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "14000",
+							"path": [
+								"api",
+								"employee",
+								"edit",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Employee",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbXBfaWQiOjIsImNtcF9lbWFpbCI6Im1lZXRAZ21haWwuY29tIiwiaWF0IjoxNTg3OTc1NzU2LCJleHAiOjE1ODgwNjIxNTZ9.bF2-WUvlQnLc0euGhbUAwyBAFcrzGUFovBuiEBg0uFg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:14000/api/employee/delete/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "14000",
+							"path": [
+								"api",
+								"employee",
+								"delete",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Employee",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbXBfaWQiOjIsImNtcF9lbWFpbCI6Im1lZXRAZ21haWwuY29tIiwiaWF0IjoxNTg3OTc1NzU2LCJleHAiOjE1ODgwNjIxNTZ9.bF2-WUvlQnLc0euGhbUAwyBAFcrzGUFovBuiEBg0uFg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:14000/api/employee/get/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "14000",
+							"path": [
+								"api",
+								"employee",
+								"get",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Getall Employees",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbXBfaWQiOjIsImNtcF9lbWFpbCI6Im1lZXRAZ21haWwuY29tIiwiaWF0IjoxNTg3OTc1NzU2LCJleHAiOjE1ODgwNjIxNTZ9.bF2-WUvlQnLc0euGhbUAwyBAFcrzGUFovBuiEBg0uFg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:14000/api/employee/get_all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "14000",
+							"path": [
+								"api",
+								"employee",
+								"get_all"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
