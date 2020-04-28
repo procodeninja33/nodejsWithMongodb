@@ -2,11 +2,11 @@
 
 module.exports = {
     local: {
-        username: process.env.CI_DB_USERNAME,
-        password: process.env.CI_DB_PASSWORD,
-        database: process.env.CI_DB_NAME,
-        host: process.env.CI_DB_HOSTNAME,
-        port: process.env.CI_DB_PORT,
+        username: process.env.LOCAL_DB_USERNAME,
+        password: process.env.LOCAL_DB_PASSWORD,
+        database: process.env.LOCAL_DB_NAME,
+        host: process.env.LOCAL_DB_HOSTNAME,
+        port: process.env.LOCAL_DB_PORT,
         dialect: 'mysql',
         dialectOptions: {
             bigNumberStrings: true
